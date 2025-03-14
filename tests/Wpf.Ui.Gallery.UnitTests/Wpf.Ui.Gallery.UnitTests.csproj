@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Wpf.Ui.Gallery\Wpf.Ui.Gallery.csproj" />
+    <ProjectReference Include="..\..\src\Wpf.Ui.Gallery\Wpf.Ui.OfficeTools.csproj" />
   </ItemGroup>
 
 </Project>

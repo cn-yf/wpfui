@@ -21,18 +21,19 @@ using Wpf.Ui.Gallery.Views.Pages.OpSystem;
 using Wpf.Ui.Gallery.Views.Pages.StatusAndInfo;
 using Wpf.Ui.Gallery.Views.Pages.Text;
 using Wpf.Ui.Gallery.Views.Pages.Windows;
+using Wpf.Ui.Gallery.Views.Pages.Print;
 
 namespace Wpf.Ui.Gallery.ViewModels.Windows;
 
 public partial class MainWindowViewModel(IStringLocalizer<Translations> localizer) : ViewModel
 {
     [ObservableProperty]
-    private string _applicationTitle = localizer["WPF UI Gallery"];
+    private string _applicationTitle = localizer["办公室运维工具"];
 
     [ObservableProperty]
     private ObservableCollection<object> _menuItems =
     [
-        new NavigationViewItem("Home", SymbolRegular.Home24, typeof(DashboardPage)),
+        new NavigationViewItem("主页", SymbolRegular.Home24, typeof(DashboardPage)),
         new NavigationViewItem()
         {
             Content = "Design guidance",
@@ -45,6 +46,7 @@ public partial class MainWindowViewModel(IStringLocalizer<Translations> localize
             },
         },
         new NavigationViewItem("All samples", SymbolRegular.List24, typeof(AllControlsPage)),
+        new NavigationViewItem("测试页", SymbolRegular.List24, typeof(PrintPage)),
         new NavigationViewItemSeparator(),
         new NavigationViewItem("Basic Input", SymbolRegular.CheckboxChecked24, typeof(BasicInputPage))
         {
